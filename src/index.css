@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #FAFAF8;
+  --color-bg-card: #FFFFFF;
+  --color-bg-subtle: #F3F3F0;
+  --color-text-primary: #20211F;
+  --color-text-secondary: #777872;
+  --color-text-muted: #A0A19B;
+  --color-border: #E7E7E1;
+  --color-border-subtle: #F0F0EB;
+  --color-accent: #426B55;
+  --color-accent-hover: #365745;
+  --color-accent-subtle: #EBF2ED;
+  --color-completed: #3B7054;
+  --color-overdue: #B34747;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-top: env(safe-area-inset-top, 0px);
+}
+
+.dark {
+  --color-bg: #151614;
+  --color-bg-card: #1D1E1C;
+  --color-bg-subtle: #262724;
+  --color-text-primary: #EDEDEA;
+  --color-text-secondary: #9FA09A;
+  --color-text-muted: #6B6C67;
+  --color-border: #2D2F2C;
+  --color-border-subtle: #242522;
+  --color-accent: #528369;
+  --color-accent-hover: #62997C;
+  --color-accent-subtle: #1C2B22;
+  --color-completed: #528369;
+  --color-overdue: #C75C5C;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: var(--safe-bottom);
+}
+
+/* Custom scrollbars that remain unobtrusive */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
